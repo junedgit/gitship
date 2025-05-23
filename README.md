@@ -1,58 +1,91 @@
-# Turborepo Tailwind CSS starter
+# GitShip
 
-This Turborepo starter is maintained by the Turborepo core team.
+## **The "Twitch for Coders"**
 
-## Using this example
+### **WIP - see you soon :)**
 
-Run the following command:
+GitShip brings the best parts of Good Old Git with a Modern EcoSystem:
 
-```sh
-npx create-turbo@latest -e with-tailwind
-```
+- **Watch code evolve** like you're pair programming remotely
+- **Fork any live session** to experiment risk-free
+- **Everything stays versioned** - no more "where did that change come from?"
 
-## What's inside?
+Built for developers who care about:
 
-This Turborepo includes the following packages/apps:
+⚡️ **Real-time sync** that would actually works  
+🧠 **Minimalist design** that stays out of your way  
+🔧 **Proper engineering** under the hood
 
-### Apps and Packages
+---
 
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## Why This Exists
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Most dev tools force you to choose between:
 
-### Building packages/ui
+- Git's safety net
+- Live collaboration's speed
 
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
+GitShip says: **why not both?**
 
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
+---
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
+## Tech Stack Deep Cut
 
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
+We use:
 
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
-```
+- **TypeScript** OfCourse
+- **PartyKit** - WebSockets without the headache
+- **Neon** - Serverless Postgres that doesn't bankrupt you
+- **Turborepo** - Because waiting for builds is so 2010
+- **package.json pls**
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+---
 
-### Utilities
+## Getting Started
 
-This Turborepo has some additional tools already setup for you:
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/junedgit/gitship.git
+   ```
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start developing:
+   ```bash
+   pnpm dev
+   ```
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Or deploy instantly:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourname/gitship)
+
+---
+
+## Who This Is For
+
+✅ **Senior devs** who want to mentor without screen sharing  
+✅ **Junior devs** learning through observation  
+✅ **Teams** that actually enjoy code reviews
+
+---
+
+## Roadmap
+
+- [x] Basic real-time editing
+- [ ] Time travel debugging
+- [ ] Integrated code reviews
+
+---
+
+## Like What You See?
+
+⭐ **Star the repo** if you'd use this  
+🐛 **Open an issue** if you find problems  
+💬 **Join our Discord** to chat development
+
+---
+
+Built with ❤️ and too much coffee.
+
+Apache 2.0 © 2024 JunedGit
