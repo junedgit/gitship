@@ -1,10 +1,10 @@
+### **WIP - see you soon :)**
+
 # GitShip
 
 ## **The "Twitch for Coders"**
 
-### **WIP - see you soon :)**
-
-GitShip brings the best parts of Good Old Git with a Modern EcoSystem:
+## GitShip brings the best parts of Good Old Git with a Modern EcoSystem:
 
 - **Watch code evolve** like you're pair programming remotely
 - **Fork any live session** to experiment risk-free
