@@ -86,6 +86,4 @@ Or deploy instantly:
 
 ---
 
-Built with ❤️ and too much coffee.
-
-Apache 2.0 © 2024 JunedGit
+Building with ❤️ and too much caffeine.
