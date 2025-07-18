@@ -1,0 +1,28 @@
+{
+  "name": "gitship",
+  "version": "0.0.1",
+  "author": "Juned",
+  "homepage": "https://github.com/junedgit/gitship",
+  "private": true,
+  "workspaces": [
+    "./server",
+    "./client"
+  ],
+  "scripts": {
+    "dev:client": "cd client && bun run dev",
+    "dev:server": "cd server && bun run dev",
+    "dev": "concurrently \"bun run dev:server\" \"bun run dev:client\""
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^9.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide",
+    "sharp",
+    "unrs-resolver"
+  ]
+}
