@@ -1,7 +1,13 @@
+import { Hero } from "@/components/app/header";
+import { Topbar as Navbar } from "@/components/app/navbar";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-2xl font-semibold">Hello World!!</h1>
+    <main>
+      <Navbar />
+      <Hero />
+      <div className="h-dvh"></div>
+      <div className="h-dvh"></div>
     </main>
   );
 }
