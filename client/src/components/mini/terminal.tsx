@@ -3,6 +3,12 @@
 import { cn } from "@/lib/utils";
 import { motion, MotionProps } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { Oxygen_Mono } from "next/font/google";
+
+const monoSpace = Oxygen_Mono({
+  weight: ["400"],
+  fallback: ["monospace"],
+});
 
 interface AnimatedSpanProps extends MotionProps {
   children: React.ReactNode;
@@ -20,7 +26,11 @@ export const AnimatedSpan = ({
     initial={{ opacity: 0, y: -5 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
-    className={cn("grid text-sm font-normal tracking-tight", className)}
+    className={cn(
+      "grid text-sm font-normal tracking-tight",
+      monoSpace.className,
+      className
+    )}
     {...props}
   >
     {children}
@@ -83,7 +93,11 @@ export const TypingAnimation = ({
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn("text-sm font-normal tracking-tight", className)}
+      className={cn(
+        "text-sm font-normal tracking-tight",
+        // monoSpace.className,
+        className
+      )}
       {...props}
     >
       {displayedText}
@@ -100,15 +114,15 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        "z-0 h-full md:max-h-[700px] w-full max-w-4xl rounded-xl border border-zinc-700 bg-neutral-900",
+        "z-0 h-full md:max-h-[700px] w-full max-w-4xl rounded-xl border border-stone-800 bg-zinc-900",
         className
       )}
     >
-      <div className="flex flex-col gap-y-2 border-b border-border p-4">
+      <div className="flex flex-col gap-y-2 border-b border-border p-4 bg-zinc-800/60 rounded-t-xl">
         <div className="flex flex-row gap-x-2">
-          <div className="h-4 w-4 rounded-full bg-red-500"></div>
-          <div className="h-4 w-4 rounded-full bg-yellow-500"></div>
-          <div className="h-4 w-4 rounded-full bg-green-500"></div>
+          <div className="h-4 w-4 rounded-full bg-red-400"></div>
+          <div className="h-4 w-4 rounded-full bg-yellow-400"></div>
+          <div className="h-4 w-4 rounded-full bg-green-400"></div>
         </div>
       </div>
       <pre className="p-4">

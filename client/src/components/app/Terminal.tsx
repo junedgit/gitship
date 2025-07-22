@@ -4,65 +4,126 @@ import {
   TypingAnimation,
 } from "@/components/mini/terminal";
 
-export function TerminalDemo() {
+export function Term() {
   return (
     <Terminal className="w-full">
       <TypingAnimation
-        delay={1000}
-        className="text-xl font-semibold text-neutral-300"
+        delay={500}
+        className="text-lg font-mono font-semibold text-stone-200/90 "
       >
         &gt; curl -s https://gitship.juned.in/init.sh | bash
       </TypingAnimation>
-      <AnimatedSpan
-        delay={5000}
-        className="mt-2 text-lg font-mono text-zinc-400"
-      >
-        <span>.. GitShip Bootstrap v0.1</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={5500} className=" text-lg font-mono text-zinc-600">
-        <span>───────────────────────────────</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={6000} className="text-lg font-mono text-amber-400">
-        <span>🔍 Checking system compatibility...</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={7000} className="text-lg font-mono text-green-400">
-        <span> ✔ Node.js v18+ detected</span>
-        <span> ✔ Git installed</span>
-        <span> ✔ SSH access OK</span>
-      </AnimatedSpan>
-      <AnimatedSpan
-        delay={8000}
-        className="mt-4 text-lg font-mono text-amber-400"
-      >
-        <span>🔐 Setting up secure credentials...</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={9000} className="text-lg font-mono text-green-400">
-        <span> ↳ Generating SSH keypair... ✅</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={10000} className="text-lg font-mono text-green-400">
-        <span> ↳ Adding public key to GitShip... ✅</span>
-      </AnimatedSpan>
-      <AnimatedSpan
-        delay={11000}
-        className="mt-4 text-lg font-mono text-amber-400"
-      >
-        <span>🧬 Initializing Git repository...</span>
-      </AnimatedSpan>
-      <AnimatedSpan delay={12000} className=" text-lg font-mono text-amber-400">
-        <span>🛰️ Syncing with GitShip servers...</span>
-      </AnimatedSpan>
-      <AnimatedSpan
-        delay={15000}
-        className="mt-4 text-xl font-mono font-semibold text-green-400"
-      >
-        <span>🎉 All done. Time to ship some code.</span>
-      </AnimatedSpan>
+      <div className="flex mx-8">
+        <AnimatedSpan delay={1500}>
+          <div className=" flex-1/2 hidden md:inline-block whitespace-pre text-slate-400 text-xs font-mono leading-tight text-center">
+            {`
+          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⠟⠛⠛⠛⠿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣠⣴⣿⡟⠁⢀⣤⣀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣦⠀⠀⠀⠀
+⠀⠀⠀⠀⣾⡿⠿⠛⠁⣰⣿⣿⣿⡆⠀⠀⣴⣶⣶⠄⠀⢻⣿⡄⠀⠀⠀
+⠀⠀⣾⡿⠁⠀⠀⠀⠀⠻⣿⣿⣿⠃⠀⣼⣿⣿⣿⠀⠀⠀⢿⣷⣄⠀⠀
+⠀⣾⣿⠁⠀⣤⣶⡄⠀⠀⠈⠉⠁⠀⠀⠈⠛⠊⠁⠀⠀⠀⠀⠙⢿⣷⠀
+⠀⣿⡇⠀⢸⣿⣿⡿⡆⠀⠀⣴⣶⣶⣴⣶⣄⠀⠀⢠⣶⣿⣦⠀⠀⣿⡇
+⠀⣿⡇⠀⠀⠛⠙⠉⠀⣰⣿⣿⣿⣿⣿⣿⣿⣇⠀⣿⣿⣿⣿⠀⠀⣿⡇
+⠀⣿⣇⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣷⣿⣷⡀⠀⠉⠉⠀⠀⣸⣿⠇
+⠀⣿⣿⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⣻⡟⠘
+⠀⢹⣿⠀⠀⠀⠀⠀⠉⠛⠉⠁⠉⠁⠙⠻⠿⠟⠀⠀⠀⠀⠀⣾⣿⠁⠀
+⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡏⠀⠀
+⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
+⠀⠀⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
+⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀
+
+Welcome to GitShip CLI v0.1 🚀
+`}
+          </div>
+        </AnimatedSpan>
+        <div className="flex-1/2">
+          <AnimatedSpan
+            delay={3500}
+            className="mt-2 pt-0 -mb-2 text-md font-mono font-bold text-yellow-300"
+          >
+            <span> &rarr; Bootstrapping Gitship v0.1</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={5500}
+            className=" text-md font-mono text-zinc-600"
+          >
+            <span>─────────────────────────────</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan
+            delay={6000}
+            className="-mt-2 text-md font-mono text-yellow-300 font-semibold"
+          >
+            <span>🔍 Checking system compatibility...</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan
+            delay={7000}
+            className="text-md font-mono font-semibold text-emerald-400"
+          >
+            <span> ✔ Node.js v18+ detected</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan
+            delay={7500}
+            className="text-md font-mono font-semibold text-emerald-400"
+          >
+            <span> ✔ Git installed</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan
+            delay={8000}
+            className="text-md font-mono font-semibold text-emerald-400"
+          >
+            <span> ✔ SSH access OK</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan
+            delay={9000}
+            className="mt-4 text-md font-mono text-yellow-300 font-semibold"
+          >
+            <span>🔐 Setting up secure credentials...</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={10000}
+            className="text-md font-mono text-emerald-400"
+          >
+            <span> ↳ Generating SSH keypair... ✅</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={10500}
+            className="text-md font-mono text-emerald-400"
+          >
+            <span> ↳ Adding public key to GitShip... ✅</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={12000}
+            className="mt-4 text-md font-mono text-purple-300 font-semibold"
+          >
+            <span>🧬 Initializing Git repository...</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={13000}
+            className=" text-md font-mono text-purple-300 font-semibold"
+          >
+            <span>🛰️ Syncing with GitShip servers...</span>
+          </AnimatedSpan>
+          <AnimatedSpan
+            delay={15000}
+            className="mt-4 text-lg font-mono font-semibold text-emerald-400"
+          >
+            <span>🎉 All done. Time to ship some code.</span>
+          </AnimatedSpan>
+        </div>
+      </div>
     </Terminal>
   );
 }
 
 /*
-<AnimatedSpan className="text-lg font-mono text-green-400">
+<AnimatedSpan className="text-md font-mono text-green-400">
         <span> ✔ git init</span>
       </AnimatedSpan>
       <AnimatedSpan className="text-lg font-mono text-green-400 overflow-hidden">

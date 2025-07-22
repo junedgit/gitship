@@ -1,6 +1,7 @@
-import { Hero } from "@/components/app/Hero";
 import { Topbar as Navbar } from "@/components/app/Navbar";
-import { TerminalDemo } from "@/components/app/Terminal";
+import { Hero } from "@/components/app/Hero";
+import { Term as Terminal } from "@/components/app/Terminal";
+import { Features } from "@/components/app/FeaturesHeader";
 
 export default function Home() {
   return (
@@ -8,9 +9,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div className="w-full md:px-auto px-4 flex justify-center items-center">
-        <TerminalDemo />
+        <Terminal />
       </div>
-      <div className="h-dvh"></div>
+      <Features />
+      <div className="h-dvh" />
     </main>
   );
 }
+
+<div className="" />;
