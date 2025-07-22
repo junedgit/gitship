@@ -58,7 +58,7 @@ const plans: Plan[] = [
 
 export default function PricingThree() {
   return (
-    <section className="note-prose relative w-full  pt-8 md:py-32">
+    <section className="note-prose relative w-full pt-8 md:mt-32">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto text-center">
           <h1
@@ -77,7 +77,7 @@ export default function PricingThree() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`flex flex-col justify-between space-y-8 rounded-(--radius) border p-6 lg:p-10 ${
+              className={`flex flex-col justify-between space-y-8 rounded-2xl border p-6 lg:p-10 ${
                 plan.highlight
                   ? "dark:bg-zinc-900 shadow-lg shadow-gray-950/5 md:col-span-3 dark:[--color-muted:var(--color-zinc-900)]"
                   : "md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0"
@@ -87,7 +87,7 @@ export default function PricingThree() {
               <div className="space-y-4">
                 <div>
                   <h2 className="font-medium">{plan.name}</h2>
-                  <span className="my-3 block text-2xl font-semibold">
+                  <span className="my-3 block text-4xl font-bold">
                     {plan.price}
                   </span>
                   <p className="text-muted-foreground text-sm">

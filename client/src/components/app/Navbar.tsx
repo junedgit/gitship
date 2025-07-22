@@ -16,15 +16,15 @@ export function Topbar() {
   const navItems = [
     {
       name: "Explore",
-      link: "#features",
+      link: "/explore",
     },
     {
       name: "Features",
-      link: "#pricing",
+      link: "#features",
     },
     {
       name: "Community",
-      link: "#community",
+      link: "https://discord.gg/ZqENdktx",
     },
     {
       name: "Contact",
@@ -42,8 +42,16 @@ export function Topbar() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Read Docs</NavbarButton>
+            <NavbarButton href="/login" variant="secondary">
+              Login
+            </NavbarButton>
+            <NavbarButton
+              target="_blank"
+              href="docs.git.juned.in"
+              variant="primary"
+            >
+              Read Docs
+            </NavbarButton>
           </div>
         </NavBody>
 

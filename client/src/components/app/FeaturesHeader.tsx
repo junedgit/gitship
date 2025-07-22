@@ -1,10 +1,11 @@
+import CTA from "../mini/cta";
 import PricingThree from "../mini/pricing";
 import { Cards } from "./cards";
 
 export function Features() {
   return (
-    <div className="h-dvh w-full max-w-7xl mx-auto items-center ">
-      <div className="bg-gradient-to-r from-stone-200 to-zinc-400 bg-clip-text text-transparent pt-52 ">
+    <div id="features" className="h-dvh w-full max-w-7xl mx-auto items-center ">
+      <div className="bg-gradient-to-r from-stone-200 to-zinc-400 bg-clip-text text-transparent pt-64 ">
         <h2 className="text-5xl font-bold  text-center">
           We Build Features You Actually Use
         </h2>
@@ -18,16 +19,31 @@ export function Features() {
           <Cards />
         </div>
       </div>
-      <div className="rounded-2xl w-7xl bg-[url('/images/bg-banner.webp')] bg-cover bg-center h-auto mt-36">
+      {/*  bg-[url('/images/bg-banner.webp')] */}
+      <div
+        className="rounded-2xl w-7xl bg-cover bg-center h-auto mt-44
+      shadow-lg bg-gradient-to-b from-background via-zinc-800 to-background text-white "
+      >
         <h1
           className="font-extrabold text-5xl py-14 pl-8
-        bg-gradient-to-r from-stone-200 to-zinc-400 bg-clip-text text-transparent
+       bg-gradient-to-r from-stone-200 to-zinc-400 bg-clip-text text-transparent
         "
         >
           Made for Indie Hackers and Tinkerers.
         </h1>
       </div>
       <PricingThree />
+      <div id="contact" className="flex items-center justify-center mt-52 ">
+        <CTA />
+      </div>
+      <footer className="text-center text-md font-semibold text-zinc-500 pb-8 mt-32">
+        <p>
+          © 2025 GitShip · Made by{" "}
+          <a href="https://juned.in" className="underline hover:text-white">
+            Juned
+          </a>{" "}
+        </p>
+      </footer>
     </div>
   );
 }

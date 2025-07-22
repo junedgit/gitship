@@ -8,11 +8,8 @@ export default function Home() {
     <main className="h-dvh w-full ">
       <Navbar />
       <Hero />
-      <div className="w-full md:px-auto px-4 flex justify-center items-center">
-        <Terminal />
-      </div>
+      <Terminal />
       <Features />
-      <div className="h-dvh" />
     </main>
   );
 }

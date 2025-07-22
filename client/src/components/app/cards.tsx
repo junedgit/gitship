@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export const Cards = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* Left Section - Model Selection */}
       <Card className="bg-zinc-900 border-gray-700">
         <CardHeader>
@@ -42,7 +42,7 @@ export const Cards = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="mt-4">
-          <div className="bg-zinc-800 rounded-lg p-4 space-y-3">
+          <div className="bg-zinc-800 rounded-2xl p-4 space-y-3">
             <div className="flex items-center gap-2 text-sm">
               <span className="text-gray-400">Add Context...</span>
             </div>
